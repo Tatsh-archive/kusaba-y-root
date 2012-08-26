@@ -7,4 +7,9 @@
     </ul>
   </nav>
 </header>
+
+<?php if ($last_validation_message): ?>
+  <?php print $last_validation_message; ?>
+<?php endif; ?>
+
 <?php print $reply_form; ?>

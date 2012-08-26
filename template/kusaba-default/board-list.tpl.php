@@ -31,3 +31,5 @@
     </li>
   <?php endforeach; ?>
 </ul>
+
+<?php print $pagination; ?>

@@ -1,5 +1,5 @@
 <ul class="thread-list">
-  <li class="parent-thread">
+  <li class="parent-post">
     <input type="checkbox" name="threads[]" value="<?php print $thread->encodeId(); ?>">
 
     <header><h2><?php print $thread->encodeTitle(); ?></h2></header>
@@ -31,8 +31,9 @@
 
         <?php if ($reply->hasValidImageFile()): ?>
           <figure>
-            <?php $image = $reply->createImageFile()->getFilename(); ?>
-            <?php $thumb = $reply->createImageFile()->getFilenameThumb(); ?>
+            <?php $imageFile = $reply->createImageFile(); ?>
+            <?php $image = $imageFile->getFilename(); ?>
+            <?php $thumb = $imageFile->getFilenameThumb(); ?>
               <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
                 <img src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="250" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>">
             </a>
@@ -45,3 +46,5 @@
     </li>
   <?php endforeach; ?>
 </ul>
+
+<?php print $pagination; ?>
