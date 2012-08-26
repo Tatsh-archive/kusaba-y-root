@@ -2,3 +2,5 @@
 kusaba
 *.kdev4
 config
+files/images/thumbs
+files/HTML
