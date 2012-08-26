@@ -4,6 +4,7 @@ require 'sutra/sLoader.php';
 require 'sutra/functions/all.php';
 require 'kusaba/classes/kLoader.php';
 require 'moor/Moor.php';
+require 'htmlpurifier/HTMLPurifier.includes.php';
 //require 'CssMin.php';
 //require 'Mollom.php';
 
