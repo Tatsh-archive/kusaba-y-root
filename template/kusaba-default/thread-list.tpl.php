@@ -11,7 +11,7 @@
           <?php $image = $thread->createImageFile()->getFilename(); ?>
           <?php $thumb = $thread->createImageFile()->getFilenameThumb(); ?>
             <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
-              <img src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="250" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>">
+              <img data-src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="250" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>">
           </a>
         </figure>
       <?php endif; ?>
@@ -35,7 +35,7 @@
             <?php $image = $imageFile->getFilename(); ?>
             <?php $thumb = $imageFile->getFilenameThumb(); ?>
               <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
-                <img src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="250" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>">
+                <img data-image-id="<?php print $imageFile->encodeId(); ?>" data-src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="250" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>" src="">
             </a>
           </figure>
         <?php endif; ?>
