@@ -49,3 +49,5 @@
 </ul>
 
 <?php print $pagination; ?>
+
+<div id="bottom"></div>
