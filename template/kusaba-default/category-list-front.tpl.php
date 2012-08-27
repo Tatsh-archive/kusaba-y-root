@@ -7,8 +7,8 @@
     <?php endif; ?>
 
     
-    <li>
-      <?php print $category->encodeName(); ?>
+    <li class="column-small">
+      <h2 class="category-name"><?php print $category->encodeName(); ?></h2>
 
       <ul>
         <?php foreach ($boards as $board): ?>
