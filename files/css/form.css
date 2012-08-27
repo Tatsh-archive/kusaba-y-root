@@ -1,0 +1,109 @@
+/* Generally this is the post/reply form */
+/* TODO Add class to it */
+.layout-978 > form {
+  clear:both;
+  background:#F7D599;
+  border:1px solid #C8AC7C;
+  border-radius:2px;
+  margin-top:6px;
+}
+
+.form-label {
+  font-weight:bold;
+  width:160px;
+  float:left;
+  padding:6px 12px;
+}
+
+.form-text,
+.form-textarea,
+.form-email,
+.form-password,
+.form-file {
+  width:260px;
+  border:1px solid #eee;
+  padding:2px 4px;
+  margin-top:6px;
+}
+
+.form-text:focus,
+.form-textarea:focus,
+.form-email:focus,
+.form-password:focus {
+  border:1px solid #BABABA;
+  -webkit-transition: border 0.2s ease-in-out;
+     -moz-transition: border 0.2s ease-in-out;
+       -o-transition: border 0.2s ease-in-out;
+          transition: border 0.2s ease-in-out;
+}
+
+#edit-message {
+  resize:vertical;
+  min-height:120px;
+  max-height:200px;
+}
+
+.form-field-container {
+  clear:both;
+}
+
+.form-required-marker {
+  color:#FF9100;
+}
+
+.form-file {
+  cursor:pointer;
+  border:0;
+  padding-left:0;
+}
+
+.form-ops-container {
+  clear:both;
+  padding-top:4px;
+  padding-bottom:4px;
+}
+
+.form-ops-container > .form-submit {
+  margin-left:184px;
+}
+
+.form-submit {
+  padding:4px 8px;
+  border:1px solid #949494;
+  cursor:pointer;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b3b3b3));
+  background-image: -webkit-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:    -moz-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:      -o-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:         linear-gradient(to bottom, #ffffff, #b3b3b3);
+}
+
+.form-submit:hover {
+  background-color: #b3b3b3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b3b3b3), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:    -moz-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:      -o-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:         linear-gradient(to bottom, #b3b3b3, #ffffff);
+}
+
+.csstransforms .form-submit:active {
+  -moz-transform:translate(1px, 1px);
+  -ms-transform:translate(1px, 1px);
+  -o-transform:translate(1px, 1px);
+  -webkit-transform:translate(1px, 1px);
+  transform:translate(1px, 1px);
+}
+
+.csstransforms3d .form-submit:active {
+  -moz-transform:translate3d(1px, 1px, 0);
+  -ms-transform:translate3d(1px, 1px, 0);
+  -o-transform:translate3d(1px, 1px, 0);
+  -webkit-transform:translate3d(1px, 1px, 0);
+  transform:translate3d(1px, 1px, 0);
+}
+
+.csstransitions .form-submit:active {
+  -webkit-transition:-webkit-transform 0.1s ease-in-out;
+}

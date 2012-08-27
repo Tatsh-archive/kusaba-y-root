@@ -1,0 +1,122 @@
+* {
+  font-size:98%;
+  font-family:Helvetica,Arial,sans-serif;
+}
+
+html {
+  background:#FFFFEE;
+}
+
+footer > p {
+  padding:0 12px;
+  font-size:80%;
+}
+
+.layout-978 {
+  width:978px;
+  margin:0 auto;
+}
+
+.column-small {
+  padding:12px;
+}
+
+.clear {
+  clear:both;
+}
+
+/* Front page */
+.category-list {
+  overflow:hidden;
+}
+
+.category-list > li {
+  float:left;
+}
+
+.category-list  > li > .category-name {
+  color:#800;
+  font-weight:bold;
+  text-decoration:underline;
+  padding-top:4px;
+  padding-bottom:4px;
+}
+
+.category-list  > li > ul > li {
+  padding:2px 0 1px 0;
+}
+
+.category-list  > li > ul a {
+  color:#800;
+  text-decoration:none;
+}
+
+.category-nav a:hover {
+  text-decoration:underline;
+  color:#e00;
+}
+
+/* All pages */
+.after-categories,
+.board-nav {
+  overflow:hidden;
+}
+
+.board-nav > .wrap-bracket-left {
+  float:left;
+}
+
+.board-nav li {
+  float:left;
+}
+
+.after-categories li > a,
+.board-nav li > a {
+  font-size:88%;
+  text-decoration:none;
+  color:#800;
+  padding-left:2px;
+}
+
+.board-nav li:last-child > a {
+  padding-right:2px;
+}
+
+.after-categories li > a:hover,
+.board-nav li > a:hover {
+  text-decoration:underline;
+  color:#e00;
+}
+
+/* Page such as /vg/ */
+.board-title {
+  font-size:140%;
+  font-weight:bold;
+  text-align:center;
+}
+
+.validation-message {
+  color:#800;
+  padding:6px 12px;
+  background:#FFC98E;
+  border-radius:2px;
+  border:1px solid #800;
+}
+
+.board-list {
+  margin-top:6px;
+}
+
+.board-list > li {
+  border-bottom:1px solid #C8AC7C;
+  clear:both;
+  overflow:hidden;
+}
+
+.board-list > li > .content > figure {
+  float:left;
+}
+
+.board-list .thread-title {
+  font-weight:bold;
+}
