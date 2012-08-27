@@ -44,17 +44,10 @@
   </head>
   <body class="<?php print $body_class; ?>">
     <section class="layout-978">
-      <nav>
-        <ul>
-        </ul>
-      </nav>
-      
-      <div id="content">
-        <?php print $content; ?>
-      </div>
+      <?php print $content; ?>
     </section>
 
-    <footer class="layout-978">
+    <footer class="layout-978 clear">
       <p>© 2012</p>
     </footer>
 
