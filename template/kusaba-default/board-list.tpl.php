@@ -20,8 +20,8 @@
             <?php $image_file = $thread->createImageFile(); ?>
             <?php $image = $image_file->getFilename(); ?>
             <?php $thumb = $image_file->getFilenameThumb(); ?>
-              <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
-                <img data-image-id="<?php print $image_file->encodeId(); ?>" data-src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="<?php print $thumb->getWidth(); ?>" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>" src="<?php print $loading_img_src; ?>">
+            <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
+              <img data-image-id="<?php print $image_file->encodeId(); ?>" data-src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="<?php print $thumb->getWidth(); ?>" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>" src="<?php print $loading_img_src; ?>">
             </a>
           </figure>
         <?php endif; ?>
