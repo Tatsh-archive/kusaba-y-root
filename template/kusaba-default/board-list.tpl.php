@@ -8,29 +8,51 @@
 
 <?php print $board_form; ?>
 
+<?php $noneText = fHTML::encode(__('None')); ?>
 <ul class="board-list">
   <?php foreach ($threads as $thread): ?>
-    <li>
-      <input type="checkbox" name="threads[]" value="<?php print $thread->encodeId(); ?>">
-
-      <header class="thread-title"><h3><?php print $thread->encodeTitle(); ?></h3></header>
-      <div class="author-name">
-        <?php print $thread->encodeName(); ?>
-        <a href="<?php print $thread->encodeReplyURL(); ?>"><?php print fHTML::encode(__('Reply')); ?></a>
+    <?php $tid = $thread->encodeId(); ?>
+    <?php $image_file = $image = $thumb = NULL; ?>
+    <?php if ($thread->hasValidImageFile()): ?>
+      <?php $image_file = $thread->createImageFile(); ?>
+      <?php $image = $image_file->getFilename(); ?>
+      <?php $thumb = $image_file->getFilenameThumb(); ?>
+    <?php endif; ?>
+  
+    <li class="thread-item">
+      <div class="file">
+        <label class="file-label"><?php print fHTML::encode(__('File:')); ?> </label>
+        <span class="file-info">
+          <?php if ($image_file): ?>
+            <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>"><?php print $image ?></a>-(<?php print fHTML::encode($image->getSize(TRUE)); ?>, <?php print $image->getWidth().'x'.$image->getHeight() ?>, <?php print fHTML::encode($image); ?>) <?php // TODO Last part must be original image name ?>
+          <?php else: ?>
+            <?php print $noneText; ?>
+          <?php endif; ?>
+        </span>
       </div>
+      
+      <input type="checkbox" name="threads[]" value="<?php print $thread->encodeId(); ?>">
+      <header class="thread-title"><h2><?php print $thread->encodeTitle(); ?></h2></header>
+      <span class="author-name">
+        <?php print $thread->encodeName(); ?>
+      </span>
+      <span class="date">
+        <?php print fHTML::encode($thread->getDateUpdated()->format('m/d/y(D)H:i')); ?>
+      </span>
+      <?php print fHTML::encode(__('No.')); ?><a class="thread-id" href="#" data-thread-id="<?php print $tid; ?>"><?php print $tid; ?></a>
+            
+      [<a href="<?php print $thread->encodeReplyURL(); ?>"><?php print fHTML::encode(__('Reply')); ?></a>]
+      
       <div class="content">
-        <?php if ($thread->hasValidImageFile()): ?>
+        <?php if ($image_file): ?>
           <figure>
-            <?php $image_file = $thread->createImageFile(); ?>
-            <?php $image = $image_file->getFilename(); ?>
-            <?php $thumb = $image_file->getFilenameThumb(); ?>
             <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>" target="_blank">
               <img data-image-id="<?php print $image_file->encodeId(); ?>" data-src="<?php print fHTML::encode($thumb->getPath(TRUE)); ?>" width="<?php print $thumb->getWidth(); ?>" height="<?php print $thumb->getHeight(); ?>" alt="<?php print $image->getSize(TRUE); ?>" src="<?php print $loading_img_src; ?>">
             </a>
           </figure>
         <?php endif; ?>
         
-        <div class="message">
+        <div class="message" data-thread-id="<?php print $tid; ?>">
           <?php print $thread->prepareMessage(); ?>
         </div>
       </div>

@@ -1,0 +1,42 @@
+.board-title {
+  font-size:140%;
+  font-weight:bold;
+  text-align:center;
+}
+
+.validation-message {
+  color:#800;
+  padding:6px 12px;
+  background:#FFC98E;
+  border-radius:2px;
+  border:1px solid #800;
+}
+
+.board-list {
+  margin-top:6px;
+}
+
+.board-list > li {
+  border-bottom:1px solid #C8AC7C;
+  clear:both;
+  overflow:hidden;
+}
+
+.board-list > li > .content > figure {
+  float:left;
+  margin-right:20px;
+  margin-bottom:20px;
+}
+
+.thread-title > h2 {
+  text-align:left;
+  display:inline;
+}
+
+.thread-title {
+  display:inline;
+}
+
+.thread-item > .author-name {
+  font-weight:bold;
+}

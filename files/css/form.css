@@ -15,6 +15,7 @@
   padding:6px 12px;
 }
 
+.form-textfield,
 .form-text,
 .form-textarea,
 .form-email,
@@ -26,6 +27,7 @@
   margin-top:6px;
 }
 
+.form-textfield:focus,
 .form-text:focus,
 .form-textarea:focus,
 .form-email:focus,
@@ -63,7 +65,7 @@
   padding-bottom:4px;
 }
 
-.form-ops-container > .form-submit {
+.form-ops-container > .form-submit:first-child {
   margin-left:184px;
 }
 
@@ -71,21 +73,26 @@
   padding:4px 8px;
   border:1px solid #949494;
   cursor:pointer;
-  background-color: #ffffff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b3b3b3));
-  background-image: -webkit-linear-gradient(top, #ffffff, #b3b3b3);
-  background-image:    -moz-linear-gradient(top, #ffffff, #b3b3b3);
-  background-image:      -o-linear-gradient(top, #ffffff, #b3b3b3);
-  background-image:         linear-gradient(to bottom, #ffffff, #b3b3b3);
+  background-color:#ffffff;
+  text-decoration:none;
+  color:#000;
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b3b3b3));
+  background-image:-webkit-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:-moz-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:-o-linear-gradient(top, #ffffff, #b3b3b3);
+  background-image:linear-gradient(to bottom, #ffffff, #b3b3b3);
+  display:inline-block;
 }
 
 .form-submit:hover {
-  background-color: #b3b3b3;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#b3b3b3), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #b3b3b3, #ffffff);
-  background-image:    -moz-linear-gradient(top, #b3b3b3, #ffffff);
-  background-image:      -o-linear-gradient(top, #b3b3b3, #ffffff);
-  background-image:         linear-gradient(to bottom, #b3b3b3, #ffffff);
+  text-decoration:none;
+  color:#000;
+  background-color:#b3b3b3;
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#b3b3b3), to(#ffffff));
+  background-image:-webkit-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:-moz-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:-o-linear-gradient(top, #b3b3b3, #ffffff);
+  background-image:linear-gradient(to bottom, #b3b3b3, #ffffff);
 }
 
 .csstransforms .form-submit:active {

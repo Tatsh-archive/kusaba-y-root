@@ -4,7 +4,7 @@
       <tr>
         <th></th>
         <th><?php fCRUD::printSortableColumn('name'); ?></th>
-        <th><?php fCRUD::printSortableColumn('short_u_r_l'); ?></th>
+        <th><?php fCRUD::printSortableColumn('short_u_r_l', __('Short URL')); ?></th>
         <th></th>
       </tr>
     </thead>
