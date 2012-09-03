@@ -17,6 +17,7 @@
       <?php $image_file = $thread->createImageFile(); ?>
       <?php $image = $image_file->getFilename(); ?>
       <?php $thumb = $image_file->getFilenameThumb(); ?>
+      <?php $original_name = $image_file->getOriginalFilename(); ?>
     <?php endif; ?>
   
     <li class="thread-item">
@@ -24,7 +25,7 @@
         <label class="file-label"><?php print fHTML::encode(__('File:')); ?> </label>
         <span class="file-info">
           <?php if ($image_file): ?>
-            <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>"><?php print $image ?></a>-(<?php print fHTML::encode($image->getSize(TRUE)); ?>, <?php print $image->getWidth().'x'.$image->getHeight() ?>, <?php print fHTML::encode($image); ?>) <?php // TODO Last part must be original image name ?>
+            <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>"><?php print $image ?></a>-(<?php print fHTML::encode($image->getSize(TRUE)); ?>, <?php print $image->getWidth().'x'.$image->getHeight() ?>, <?php print fHTML::encode($original_name); ?>)
           <?php else: ?>
             <?php print $noneText; ?>
           <?php endif; ?>
