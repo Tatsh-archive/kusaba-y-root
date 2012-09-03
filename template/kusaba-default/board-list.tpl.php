@@ -24,7 +24,7 @@
       <div class="file">
         <label class="file-label"><?php print fHTML::encode(__('File:')); ?> </label>
         <span class="file-info">
-          <?php if ($image_file): ?>
+          <?php if ($image): ?>
             <a href="<?php print fHTML::encode($image->getPath(TRUE)); ?>"><?php print $image ?></a>-(<?php print fHTML::encode($image->getSize(TRUE)); ?>, <?php print $image->getWidth().'x'.$image->getHeight() ?>, <?php print fHTML::encode($original_name); ?>)
           <?php else: ?>
             <?php print $noneText; ?>
