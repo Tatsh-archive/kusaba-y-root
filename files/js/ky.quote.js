@@ -14,6 +14,8 @@ $(function () {
     $textarea.moveCursorToEnd();
     $textarea.focus();
 
+    location.hash = '#edit-name';
+
     event.preventDefault();
     return false;
   });
