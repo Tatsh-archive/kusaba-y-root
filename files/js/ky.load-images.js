@@ -14,10 +14,5 @@ $(function () {
     $this.attr('width', 250);
     $this.attr('height', 250);
     $this.attr('src', notFoundSrc);
-    //console.log('Failed to load ' + $(this).attr('data-src'));
   });
-
-//   $images.on('load', function () {
-//     console.log('Loaded ' + $(this).attr('data-src'));
-//   });
 });
