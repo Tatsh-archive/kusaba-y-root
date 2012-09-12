@@ -114,3 +114,8 @@
 .csstransitions .form-submit:active {
   -webkit-transition:-webkit-transform 0.1s ease-in-out;
 }
+
+#recaptcha_widget_div {
+  width:318px;
+  float:left;
+}
