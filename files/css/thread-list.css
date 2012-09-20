@@ -28,7 +28,8 @@
   margin-bottom:20px;
 }
 
-.thread-title > h2 {
+.thread-title > h2,
+.thread-list > li h2 {
   text-align:left;
   display:inline;
 }
